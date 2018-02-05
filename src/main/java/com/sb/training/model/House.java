@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "house")
 public class House {
     private int id;
-    private String address;
+    private String colony;
     private String city;
     private Person person;
 
@@ -18,14 +18,6 @@ public class House {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -44,5 +36,13 @@ public class House {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getColony() {
+        return colony;
+    }
+
+    public void setColony(String colony) {
+        this.colony = colony;
     }
 }
