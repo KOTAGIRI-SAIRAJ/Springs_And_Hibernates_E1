@@ -29,7 +29,7 @@ public class Bike {
     }
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "person_id", nullable = false)
+    @JoinColumn(name = "person_bike_id", nullable = false)
     public Person getPerson() {
         return person;
     }
