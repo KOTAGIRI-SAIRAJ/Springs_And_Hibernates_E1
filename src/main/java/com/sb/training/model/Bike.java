@@ -10,6 +10,15 @@ public class Bike {
     private String bikeBrand;
     private Person person;
 
+    @Override
+    public String toString() {
+        return "Bike{" +
+                "id=" + id +
+                ", bikeBrand='" + bikeBrand + '\'' +
+                ", person=" + person +
+                '}';
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public int getId() {

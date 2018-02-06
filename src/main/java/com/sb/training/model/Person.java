@@ -14,6 +14,18 @@ public class Person {
     private Fingerprint fingerprint;
     private List<BankAccount> bankAccountList;
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", Name='" + Name + '\'' +
+                ", houseList=" + houseList +
+                ", bike=" + bike +
+                ", fingerprint=" + fingerprint +
+                ", bankAccountList=" + bankAccountList +
+                '}';
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public int getId() {

@@ -5,10 +5,21 @@ import javax.persistence.*;
 @Entity
 @Table(name = "house")
 public class House {
+
     private int id;
     private String colony;
     private String city;
     private Person person;
+
+    @Override
+    public String toString() {
+        return "House{" +
+                "id=" + id +
+                ", colony='" + colony + '\'' +
+                ", city='" + city + '\'' +
+                ", person=" + person +
+                '}';
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
