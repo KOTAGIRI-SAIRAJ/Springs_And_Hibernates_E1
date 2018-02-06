@@ -19,6 +19,7 @@ public class Bike {
         this.id = id;
     }
 
+    @Column(name = "bike_brand")
     public String getBikeBrand() {
         return bikeBrand;
     }

@@ -6,11 +6,13 @@ import java.util.List;
 @Entity
 @Table(name = "person")
 public class Person {
+
     private int id;
     private String Name;
     private List<House> houseList;
     private Bike bike;
     private Fingerprint fingerprint;
+    private List<BankAccount> bankAccountList;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,6 +24,7 @@ public class Person {
         this.id = id;
     }
 
+    @Column(name = "name")
     public String getName() {
         return Name;
     }
@@ -55,5 +58,14 @@ public class Person {
 
     public void setFingerprint(Fingerprint fingerprint) {
         this.fingerprint = fingerprint;
+    }
+
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "person")
+    public List<BankAccount> getBankAccountList() {
+        return bankAccountList;
+    }
+
+    public void setBankAccountList(List<BankAccount> bankAccountList) {
+        this.bankAccountList = bankAccountList;
     }
 }

@@ -30,6 +30,7 @@ public class House {
         this.person = person;
     }
 
+    @Column(name = "city")
     public String getCity() {
         return city;
     }
@@ -38,6 +39,7 @@ public class House {
         this.city = city;
     }
 
+    @Column(name = "colony")
     public String getColony() {
         return colony;
     }
