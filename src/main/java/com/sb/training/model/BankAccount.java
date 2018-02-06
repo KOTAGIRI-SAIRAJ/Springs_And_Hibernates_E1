@@ -39,7 +39,7 @@ public class BankAccount {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "person_account_number")
+    @JoinColumn(name = "person_account_id")
     public Person getPerson() {
         return person;
     }

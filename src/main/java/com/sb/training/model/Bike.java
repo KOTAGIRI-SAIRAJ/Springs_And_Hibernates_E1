@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "bike")
 public class Bike {
+
     private int id;
     private String bikeBrand;
     private Person person;
